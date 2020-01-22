@@ -232,7 +232,6 @@ button{
   }
 
   .user-details{
-    width: calc(100% - 22px);
     padding: 0 15px;
     text-align: right;
   }
@@ -240,6 +239,23 @@ button{
   .user-settings{
     width: 22px;
   }
+
+  .user{
+    text-align: right;
+  }
+
+  .user-btn.user-blk {
+      float: left;
+      display: none;
+  }
+
+  .user-btn.user-blk button {
+      background: transparent;
+      border: 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 1px 0 0;
+}
 
 /* Dashboard */
 /* Dashboard - Side Panel */
@@ -384,6 +400,7 @@ button{
     padding: 10px 15px;
     background: #2ba1d1;
     color: #fff;
+    line-height: 1;
   }
 
   .content-list table tr td:first-of-type{
@@ -435,6 +452,7 @@ button{
   /* Modal Delete */
   .modal-delete{
     background: rgba(0,0,0,0.6);
+    padding: 0 15px;
   }
 
   .modal-delete .modal-body {
@@ -619,6 +637,78 @@ button{
 }
   
 
+/****************************************
+MEDIA QUERIES
+****************************************/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+  
+  
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+  .sidenav-panel{
+    left: -100%;
+  }
+
+  .content-panel{
+    float: none;
+    width: 100%;
+  }
+
+  .content-header h2{
+    width: 100%;
+  }
+
+  .content-header-btn{
+    margin: 10px 0;
+  }
+
+  .content-list table tr td:first-of-type {
+    width: 70%;
+  }
+
+  .search-field{
+    max-width: 100%;
+  }
+
+  .user-blk{
+    margin-top: 12px;
+  }
+
+  .content-list{
+    padding: 15px;
+  }
+
+  .user-btn.user-blk {
+    display: block;
+  }
+}
+
+@media only screen and (max-width : 576px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .content-list table tr td:first-of-type {
+    width: 60%;
+  }
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+  .content-list table tr td:first-of-type {
+    width: 57%;
+    font-size: 14px;
+  }
+}
 
   
 

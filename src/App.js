@@ -60,6 +60,17 @@ class Modal extends React.Component {
   }
 }
 
+class MobileMenu extends React.Component {
+  toggleMenu() {
+    
+  }
+  render() {
+    return (
+      <button onClick={this.toggleMenu}>Menu</button>
+    );
+  }
+}
+
 const Navigation = () => (
   <div className="sidenav-panel">
     <div className="sidenav-logo">
@@ -78,7 +89,10 @@ const Navigation = () => (
   </div>
 );
 
+
+
 const Header = () => (
+
   <header className="header-wrap">
       <div className="container-fluid">
         <div className="row">
@@ -88,13 +102,18 @@ const Header = () => (
             </div>
           </div>
           <div className="col-md-4">
-            <div className="user-details user-blk">
-              Hi <span>Aldrin</span>
-            </div>
-            <div className="user-settings user-blk">
-              <NavLink exact activeClassName="current" to='/'>
-                <img className="img-fluid" src="/img/sign-out.png" alt="Logout"/>
-              </NavLink>
+            <div className="user">
+              <div className="user-btn user-blk">
+                <MobileMenu />
+              </div>
+              <div className="user-details user-blk">
+                Hi <span>Aldrin</span>
+              </div>
+              <div className="user-settings user-blk">
+                <NavLink exact activeClassName="current" to='/'>
+                  <img className="img-fluid" src="/img/sign-out.png" alt="Logout"/>
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
