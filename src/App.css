@@ -515,7 +515,7 @@ button{
   }
 
 
-/* Dashboard - Edit */
+/* Dashboard - Edit/Add */
 .content-fullname-field {
   margin: 30px 0;
 }
@@ -549,7 +549,8 @@ button{
   margin: 20px 0;
 }
 
-.content-edit-label {
+.content-edit-label,
+.content-add-label {
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -635,6 +636,16 @@ button{
   background: #2ba1d1;
   color: #fff;
 }
+
+/* Accordion */
+.content-accordion-label {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  color: #fff;
+}
   
 
 /****************************************
@@ -683,7 +694,9 @@ MEDIA QUERIES
     margin-top: 12px;
   }
 
-  .content-list{
+  .content-list,
+  .content-blk-table,
+  .content-main{
     padding: 15px;
   }
 

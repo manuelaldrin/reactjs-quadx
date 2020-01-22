@@ -3,6 +3,7 @@ import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink, Switch, Route } from 'react-router-dom';
+import Accordion from "./Accordion";
 
 const App = () => (
   <div className='app'>
@@ -70,6 +71,8 @@ class MobileMenu extends React.Component {
     );
   }
 }
+
+
 
 const Navigation = () => (
   <div className="sidenav-panel">
@@ -261,34 +264,39 @@ const ContentEdit = () => (
 
     <h2 className="content-edit-label">Shipping Fee</h2>
     <div className="content-edit-table content-blk-table">
-      <h3>Metro Manila</h3>
-      <div className="content-edit-main content-blk-main">
-        <div className="content-edit-row content-blk-row">
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentbox" >Box</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentbox" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentoversized" >Oversized</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentoversized" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentbigpouch" >Big Pouch</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentbigpouch" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentsmallpouch" >Small Pouch</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentsmallpouch" />
+      
+      <Accordion allowMultipleOpen>
+        <div label="Metro Manila" isOpen>
+          <div className="content-edit-main content-blk-main">
+            <div className="content-edit-row content-blk-row">
+              <div className="content-edit-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentbox" >Box</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentbox" />
+              </div>
+              <div className="content-edit-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentoversized" >Oversized</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentoversized" />
+              </div>
+              <div className="content-edit-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentbigpouch" >Big Pouch</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentbigpouch" />
+              </div>
+              <div className="content-edit-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentsmallpouch" >Small Pouch</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentsmallpouch" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="content-address-prov">
-        <p>Provincial</p>
-      </div>
-      <div className="content-address-intraprov">
-        <p>Intra Provincial</p>
-      </div>
+        <div label="Provincial">
+          No item/s
+        </div>
+        <div label="Intra Provincial">
+          No item/s
+        </div>
+      </Accordion>
     </div>
+
 
     <div className="content-edit-btns content-blk-btns">
       <button className="update-btn">Update</button>
@@ -299,7 +307,7 @@ const ContentEdit = () => (
 );
 
 const ContentAdd = () => (
-  <div className="content-edit content-main">
+  <div className="content-add content-main">
     
     <div className="content-header">
       <h2>Add New Merchant</h2>
@@ -309,35 +317,39 @@ const ContentAdd = () => (
       <input className="fast-ease" type="text" placeholder="" name="fullname" required />
     </div>
 
-    <h2 className="content-edit-label">Shipping Fee</h2>
-    <div className="content-edit-table content-blk-table">
-      <h3>Metro Manila</h3>
-      <div className="content-edit-main content-blk-main">
-        <div className="content-edit-row content-blk-row">
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentbox" >Box</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentbox" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentoversized" >Oversized</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentoversized" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentbigpouch" >Big Pouch</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentbigpouch" />
-          </div>
-          <div className="content-edit-col content-blk-col in-blk in-blk-mid">
-            <label className="in-blk in-blk-mid" htmlFor="contentsmallpouch" >Small Pouch</label>
-            <input className="fast-ease" type="text" placeholder="" name="contentsmallpouch" />
+    <h2 className="content-add-label">Shipping Fee</h2>
+    <div className="content-add-table content-blk-table">
+      
+      <Accordion allowMultipleOpen>
+        <div label="Metro Manila" isOpen>
+          <div className="content-add-main content-blk-main">
+            <div className="content-add-row content-blk-row">
+              <div className="content-add-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentbox" >Box</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentbox" />
+              </div>
+              <div className="content-add-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentoversized" >Oversized</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentoversized" />
+              </div>
+              <div className="content-add-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentbigpouch" >Big Pouch</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentbigpouch" />
+              </div>
+              <div className="content-add-col content-blk-col in-blk in-blk-mid">
+                <label className="in-blk in-blk-mid" htmlFor="contentsmallpouch" >Small Pouch</label>
+                <input className="fast-ease" type="text" placeholder="" name="contentsmallpouch" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="content-address-prov">
-        <p>Provincial</p>
-      </div>
-      <div className="content-address-intraprov">
-        <p>Intra Provincial</p>
-      </div>
+        <div label="Provincial">
+          No item/s
+        </div>
+        <div label="Intra Provincial">
+          No item/s
+        </div>
+      </Accordion>
     </div>
 
     <div className="content-edit-btns content-blk-btns">
